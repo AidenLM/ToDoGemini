@@ -70,7 +70,6 @@ async def delete_todo(db:db_dependency,todo_id:int = Path(gt=0)):
     todo = db.query(Todo).filter(Todo.id == todo_id).first()
     if todo is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="Todo is not found!")
-    #db.query(Todo).filter(Todo.id == todo_id).first()
     #for ensure to delete correct data
     db.delete(todo)
     db.commit()
