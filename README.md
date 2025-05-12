@@ -1,49 +1,43 @@
-ToDoGemini
-ToDoGemini is a simple yet powerful task management web application built using FastAPI and SQLAlchemy. It allows users to create, view, and manage their tasks through a clean and intuitive interface.
+# ToDoGemini
 
-🚀 Features
-Create, list, and delete to-do tasks
+**ToDoGemini** is a simple yet powerful task management web application built using FastAPI and SQLAlchemy. It allows users to create, view, and manage their tasks through a clean and intuitive interface.
 
-Fast and asynchronous API endpoints using FastAPI
+## 🚀 Features
 
-SQLAlchemy-based database operations
+- Create, list, and delete to-do tasks  
+- Fast and asynchronous API endpoints using FastAPI  
+- SQLAlchemy-based database operations  
+- Modern UI with HTML, CSS, and JavaScript  
+- SQLite database support for lightweight storage  
 
-Modern UI with HTML, CSS, and JavaScript
+## 🛠️ Installation
 
-SQLite database support for lightweight storage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AidenLM/ToDoGemini.git
+   cd ToDoGemini
+   ```
 
-🛠️ Installation
-Clone the repository:
+2. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-bash
-Copy
-Edit
-git clone https://github.com/AidenLM/ToDoGemini.git
-cd ToDoGemini
-Install the required Python packages:
+3. Initialize the database:
+   ```bash
+   alembic upgrade head
+   ```
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Initialize the database:
+4. Run the application:
+   ```bash
+   uvicorn main:app --reload
+   ```
 
-bash
-Copy
-Edit
-alembic upgrade head
-Run the application:
+5. Open your browser and go to `http://localhost:8000` to use the app.
 
-bash
-Copy
-Edit
-uvicorn main:app --reload
-Open your browser and go to http://localhost:8000 to use the app.
+## 📁 Project Structure
 
-📁 Project Structure
-csharp
-Copy
-Edit
+```
 ToDoGemini/
 ├── alembic/            # Database migration scripts
 ├── routers/            # API routers
@@ -55,15 +49,18 @@ ToDoGemini/
 ├── models.py           # SQLAlchemy models
 ├── requirements.txt    # Python dependencies
 └── todoai_app.db       # SQLite database file
-🤝 Contributing
+```
+
+## 🤝 Contributing
+
 Contributions are welcome! Here's how to contribute:
 
-Fork the repository
+1. Fork the repository  
+2. Create a new branch: `git checkout -b feature-name`  
+3. Make your changes and commit them: `git commit -m 'Add feature'`  
+4. Push to your branch: `git push origin feature-name`  
+5. Open a pull request  
 
-Create a new branch: git checkout -b feature-name
+## 📄 License
 
-Make your changes and commit them: git commit -m 'Add feature'
-
-Push to your branch: git push origin feature-name
-
-Open a pull request
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
